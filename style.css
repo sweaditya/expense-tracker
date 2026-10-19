@@ -1,0 +1,173 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6fb;
+    color: #1e293b;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* ===== Main Heading ===== */
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #166534;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+/* ===== Expense Form ===== */
+#expense-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ===== Inputs and Select ===== */
+#expense-form input,
+#expense-form select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #dbe3ee;
+    border-radius: 9px;
+    font-size: 15px;
+    color: #1e293b;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#expense-form input:focus,
+#expense-form select:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+}
+
+#expense-form input::placeholder {
+    color: #94a3b8;
+}
+
+/* ===== Add Expense Button ===== */
+#expense-form button {
+    padding: 13px;
+    border: none;
+    border-radius: 9px;
+    background: #16a34a;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+#expense-form button:hover {
+    background: #15803d;
+    transform: translateY(-1px);
+}
+
+#expense-form button:active {
+    transform: translateY(0);
+}
+
+/* ===== Total Amount ===== */
+h2 {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 22px 25px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#total {
+    color: #16a34a;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+/* ===== Expense List ===== */
+#expense-list {
+    max-width: 600px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#expense-list li {
+    background: #ffffff;
+    padding: 16px 18px;
+    border-radius: 12px;
+    border: 1px solid #e8edf4;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    overflow-wrap: anywhere;
+}
+
+/* ===== Delete Button ===== */
+#expense-list li button {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    background: #fee2e2;
+    color: #b91c1c;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#expense-list li button:hover {
+    background: #fecaca;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 480px) {
+    body {
+        padding: 25px 14px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #expense-form {
+        padding: 18px;
+    }
+
+    h2 {
+        padding: 18px;
+        font-size: 1.1rem;
+    }
+
+    #total {
+        font-size: 1.35rem;
+    }
+
+    #expense-list li {
+        padding: 13px;
+        font-size: 14px;
+    }
+}
